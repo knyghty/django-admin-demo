@@ -1,0 +1,5 @@
+-e git+https://github.com/django/django.git@main#egg=django
+black
+docutils
+isort
+spotipy
