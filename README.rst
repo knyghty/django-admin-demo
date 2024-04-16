@@ -37,6 +37,15 @@ It can take a while and it might be a good idea to fetch only one artist at
 a time to avoid rate limits or other issues. Not every album / track will be
 downloaded -- just whatever is on the first page of results for each.
 
+The URLs are internationalized, with English as the default language. This is useful for testing right-to-left styling.
+If you want to quickly switch to RTL styling and load translations, add an RTL language code as a prefix (e.g., `ar`):
+
+``http://127.0.0.1:8000/ar/admin/``
+
+The language code prefix shouldn't be added if you want to use the default language (i.e., English):
+
+``http://127.0.0.1:8000/admin/``
+
 Deployment
 ----------
 
