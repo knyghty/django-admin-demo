@@ -6,7 +6,10 @@ import spotipy
 from django.core.management import BaseCommand
 from spotipy.oauth2 import SpotifyClientCredentials
 
-from demo.models import Artist, Release, ReleaseTrack, Track
+from demo.models import Artist
+from demo.models import Release
+from demo.models import ReleaseTrack
+from demo.models import Track
 
 
 def _get_release_date(release):
