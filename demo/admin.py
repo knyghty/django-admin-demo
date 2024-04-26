@@ -1,6 +1,9 @@
 from django.contrib import admin
 
-from demo.models import Artist, Release, ReleaseTrack, Track
+from demo.models import Artist
+from demo.models import Release
+from demo.models import ReleaseTrack
+from demo.models import Track
 
 
 class ReleaseInline(admin.StackedInline):
