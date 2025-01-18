@@ -48,7 +48,7 @@ You can also see the congrats page, also in any language:
 
 ``http://localhost:8000/congrats/``
 
-``http://localhost:8000/nl/congrats/``
+``http://localhost:8000/he/congrats/``
 
 Deployment
 ----------
