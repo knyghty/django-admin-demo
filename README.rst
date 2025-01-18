@@ -44,6 +44,12 @@ change the URL prefix to an RTL language code (e.g., `ar`):
 
 ``http://127.0.0.1:8000/ar/admin/``
 
+You can also see the congrats page, also in any language:
+
+``http://localhost:8000/congrats/``
+
+``http://localhost:8000/nl/congrats/``
+
 Deployment
 ----------
 
