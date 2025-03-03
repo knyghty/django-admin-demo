@@ -39,8 +39,14 @@ class Track(models.Model):
 
 class ReleaseTrack(models.Model):
     release = models.ForeignKey(Release, on_delete=models.CASCADE)
-    track = models.ForeignKey(Track, on_delete=models.CASCADE)
-    track_number = models.PositiveIntegerField()
+    track = models.ForeignKey(
+        Track,
+        on_delete=models.CASCADE,
+        help_text="There may be multiple versions of a track with the same name.",
+    )
+    track_number = models.PositiveIntegerField(
+        help_text="The first track is 1, not 0."
+    )
 
     class Meta:
         ordering = ["release", "track_number"]
