@@ -11,6 +11,7 @@ class ReleaseInline(admin.StackedInline):
 
 
 class ReleaseTrackInline(admin.TabularInline):
+    autocomplete_fields = ["track"]
     fields = ["track_number", "track"]
     model = ReleaseTrack
 
@@ -24,12 +25,12 @@ class ArtistAdmin(admin.ModelAdmin):
 
 @admin.register(Release)
 class ReleaseAdmin(admin.ModelAdmin):
-    autocomplete_fields = ["artist"]
     date_hierarchy = "release_date"
     inlines = [ReleaseTrackInline]
     list_display = ["title", "artist", "type", "release_date"]
     list_editable = ["type", "release_date"]
     list_filter = ["type"]
+    raw_id_fields = ["artist"]
     readonly_fields = ["id"]
     search_fields = ["title", "artist__name"]
 
