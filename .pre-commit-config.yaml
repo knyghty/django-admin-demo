@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: v6.0.0
     hooks:
       - id: check-added-large-files
       - id: check-ast
@@ -22,13 +22,13 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/adamchainz/django-upgrade
-    rev: "1.22.2"
+    rev: "1.31.1"
     hooks:
       - id: django-upgrade
         args: [--target-version, "5.0"]
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.9.2
+    rev: v0.16.0
     hooks:
       - id: ruff
         args: [--fix]

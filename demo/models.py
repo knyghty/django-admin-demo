@@ -20,7 +20,7 @@ class Release(models.Model):
     artist = models.ForeignKey(
         Artist, on_delete=models.CASCADE, related_name="releases", null=True
     )
-    type = models.CharField(max_length=255, choices=ReleaseType.choices)
+    type = models.CharField(max_length=255, choices=ReleaseType)
     title = models.CharField(max_length=255)
     release_date = models.DateField()
 
